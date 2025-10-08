@@ -94,6 +94,7 @@ class TEIAlignmentViewer extends HTMLElement {
             transition: background-color 0.2s, box-shadow 0.2s;
             cursor: pointer;
             position: relative;
+            text-align: justify;
           }
           .verse.locked {
             box-shadow: inset 0 0 0 2px #f56a6a;
@@ -129,8 +130,8 @@ class TEIAlignmentViewer extends HTMLElement {
 
         const wrapper = document.createElement("div");
 
-        const title = xml.querySelector("teiHeader title")?.textContent || "Titolo";
-        const author = xml.querySelector("teiHeader author")?.textContent || "Autore";
+        const title = xml.querySelector("teiHeader title")?.textContent || "Seven Gothic Tales / Syv fantastiske Fortællinger";
+        const author = xml.querySelector("teiHeader author")?.textContent || "Karen Blixen";
 
         wrapper.innerHTML = `
           <div class="header">
