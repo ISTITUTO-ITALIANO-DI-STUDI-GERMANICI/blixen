@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Alignment Demo | Karen Blixen Digital Edition</title>
+  <link rel="stylesheet" href="fontawesome-all.min.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Karen Blixen</strong> Digital Scholarly Edition</a>
+          <ul class="icons">
+            <li><a href="#demo" class="button small">Demo</a></li>
+            <li><a href="thepoet.html" class="button small">Viewer (lite)</a></li>
+          </ul>
+        </header>
+
+        <section id="intro">
+          <header class="major">
+            <h2>Aligned Text Demo</h2>
+          </header>
+          <p>
+            Explore how Danish originals and English translations are synchronised for comparative reading.
+            This demo reuses the same editorial theme as the homepage while embedding the interactive
+            alignment viewer built on TEI/XML data.
+          </p>
+          <ul class="actions">
+            <li><a href="#demo" class="button primary">Jump to Viewer</a></li>
+          </ul>
+        </section>
+
+        <section id="demo">
+          <header class="major">
+            <h2>Interactive Alignment Viewer</h2>
+          </header>
+          <div class="box alignment-demo">
+            <tei-alignment-viewer src="demo.xml"></tei-alignment-viewer>
+          </div>
+          <ul class="actions">
+            <li><a href="demo.xml" class="button">Download TEI</a></li>
+          </ul>
+        </section>
+
+        <section id="tips">
+          <header class="major">
+            <h2>How to Read the Demo</h2>
+          </header>
+          <div class="features">
+            <article>
+              <span class="icon solid fa-mouse-pointer"></span>
+              <div class="content">
+                <h3>Hover &amp; Highlight</h3>
+                <p>Move the cursor over a verse to spotlight the aligned span in both languages.</p>
+              </div>
+            </article>
+            <article>
+              <span class="icon solid fa-thumbtack"></span>
+              <div class="content">
+                <h3>Lock Pairs</h3>
+                <p>Click once to lock the highlight while you inspect the parallel passage in detail.</p>
+              </div>
+            </article>
+            <article>
+              <span class="icon solid fa-sliders-h"></span>
+              <div class="content">
+                <h3>Toggle Line Numbers</h3>
+                <p>Use the viewer controls to show or hide numbering, especially handy on smaller screens.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div class="inner">
+        <section id="search" class="alt">
+          <form method="post" action="#">
+            <input type="text" name="query" id="query" placeholder="Search" />
+          </form>
+        </section>
+
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#demo">Alignment Viewer</a></li>
+            <li><a href="#tips">Usage Tips</a></li>
+            <li><a href="thepoet.html">Minimal Viewer</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major">
+            <h2>Why This Matters</h2>
+          </header>
+          <p>
+            The demo underscores how linked passages help students and researchers trace motifs, stylistic
+            shifts, and translation choices across languages.
+          </p>
+          <ul class="contact">
+            <li class="icon solid fa-book">Seven Gothic Tales — prototype dataset</li>
+            <li class="icon solid fa-code">TEI/XML transformed in-browser</li>
+            <li class="icon solid fa-laptop">Optimised for desktop and tablet navigation</li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">© <span id="year"></span> Karen Blixen Digital Edition — EN–DA.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="tei-alignment-viewer.js"></script>
+</body>
+</html>

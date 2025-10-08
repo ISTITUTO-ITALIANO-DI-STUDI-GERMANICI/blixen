@@ -91,7 +91,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #7f888f;
+  color: #1f2328;
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
@@ -1568,6 +1568,28 @@ button,
     button.primary:active,
     .button.primary:active {
       background-color: #f45c5c; }
+
+details.edn summary {
+  list-style: none; }
+
+details.edn summary::-webkit-details-marker {
+  display: none; }
+
+details.edn summary.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem; }
+
+details.edn summary.button > span {
+  flex: 1;
+  text-align: left; }
+
+details.edn .caret {
+  transition: transform 0.2s ease-in-out; }
+
+details.edn[open] .caret {
+  transform: rotate(180deg); }
   input[type="submit"].disabled, input[type="submit"]:disabled,
   input[type="reset"].disabled,
   input[type="reset"]:disabled,
