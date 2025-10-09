@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>DiScEPT Alignment Model | Karen Blixen Aligned</title>
+  <link rel="stylesheet" href="fontawesome-all.min.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Karen Blixen</strong> Aligned</a>
+          <ul class="icons">
+            <li><a href="#model" class="button small">Overview</a></li>
+            <li><a href="index.html#works" class="button small">Back to Works</a></li>
+          </ul>
+        </header>
+
+        <section id="model">
+          <header class="major">
+            <h2>DiScEPT Alignment Model</h2>
+          </header>
+          <p class="text-justify">
+            The DiScEPT pipeline packages each bilingual alignment as a <code>teiCorpus</code> that gathers the shared scholarly metadata for the bundle and exposes alignment intelligence in a single <code>standOff</code> hub. Translation correspondences are recorded through ordered <code>join</code> cascades, whose <code>@target</code> attributes point to token identifiers distributed across the witnesses. The <code>@type</code> flag allows separate layers—linguistic alignment, structural cues, or commentary—to coexist without conflating their analytical purpose. A concluding <code>linkGrp type="translation"</code> threads together complementary join sets so scripts and viewers can traverse parallel passages without inspecting the witnesses directly.
+          </p>
+          <p class="text-justify">
+            Inside the corpus wrapper, each language is delivered as an autonomous TEI document. Paragraph-level <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> containers retain human-readable structure, while every lexical unit is tokenised into a <code>&lt;w xml:id="…"&gt;</code> element. These stable identifiers guarantee round-tripping between the alignment tables and the diplomatic transcription, empower granular annotation, and underpin automatic rendering in the alignment viewer. Because segmentation is expressed through token grouping rather than hard-coded sentences, editors can experiment with alternative readings, layer new analytical joins, or stage additional languages without rewriting the base texts. The public toolkit, examples, and deployment guidelines live in the DiScEPT repository at <a href="https://istituto-italiano-di-studi-germanici.github.io/DiScEPT/" target="_blank" rel="noopener">https://istituto-italiano-di-studi-germanici.github.io/DiScEPT/</a>.
+          </p>
+          <ul class="actions">
+            <li><a href="index.html" class="button">Return Home</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div class="inner">
+        <section id="search" class="alt">
+          <form method="post" action="#">
+            <input type="text" name="query" id="query" placeholder="Search" />
+          </form>
+        </section>
+
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#model">Alignment Model</a></li>
+            <li><a href="index.html#works">Works</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major">
+            <h2>TEI Highlights</h2>
+          </header>
+          <ul class="contact">
+            <li class="icon solid fa-code-branch"><code>teiCorpus</code> + shared <code>standOff</code></li>
+            <li class="icon solid fa-language">Token-level <code>&lt;w xml:id&gt;</code> alignment</li>
+            <li class="icon solid fa-link">Reusable joins via <code>linkGrp</code></li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">© <span id="year"></span> Karen Blixen Aligned — EN–DA.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

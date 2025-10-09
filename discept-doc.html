@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Discept Alignment Documentation | Karen Blixen Aligned</title>
+  <link rel="stylesheet" href="fontawesome-all.min.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Karen Blixen</strong> Aligned</a>
+          <ul class="icons">
+            <li><a href="#documentation" class="button small">Overview</a></li>
+            <li><a href="index.html#works" class="button small">Back to Works</a></li>
+          </ul>
+        </header>
+
+        <section id="documentation">
+          <header class="major">
+            <h2>Discept Alignment Documentation</h2>
+          </header>
+          <p class="text-justify">
+            Discept.xml captures the alignment of Karen Blixen's 1934 essay "Discept" across its Danish source and the English rendering in the 1957 edition of Seven Gothic Tales. The TEI document preserves every segmentation decision in &lt;seg type=&quot;utterance&quot;&gt; units, anchoring the English text with @corresp pointers to the Danish witness so scholars can trace the rhythm of Blixen's voice. Editorial notes in &lt;note type=&quot;commentary&quot;&gt; record idiomatic divergences, while &lt;listRelation&gt; charts cross-references between the two language streams. Inline &lt;timeline&gt; markers situate the debate within Blixen's chronology.
+          </p>
+          <p class="text-justify">
+            For computational reuse, the file exposes URIs in &lt;linkGrp&gt; elements named discept-stance that trace repeated metaphors of obsession, devotion, and artistic doubt. Each alignment cell logs page breaks from the Gyldendal print impression via &lt;pb facs&gt; so curators can remap the reading order onto the canonical foliation. Researchers can download the file, inspect the @ana values to understand interpretive stances, and transform the structure into tabular formats through XSLT or the supplied viewer component. The edition has been validated against TEI P5 guidelines, encoded in UTF-8, checked for round-tripping through Roma schemas, and mirrored in the alignment viewer to ensure it remains a core for translation studies and digital philology.
+          </p>
+          <ul class="actions">
+            <li><a href="index.html" class="button">Return Home</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div class="inner">
+        <section id="search" class="alt">
+          <form method="post" action="#">
+            <input type="text" name="query" id="query" placeholder="Search" />
+          </form>
+        </section>
+
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#documentation">Discept Documentation</a></li>
+            <li><a href="index.html#works">Works</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major">
+            <h2>TEI Highlights</h2>
+          </header>
+          <ul class="contact">
+            <li class="icon solid fa-tags">Segmented with &lt;seg type=&quot;utterance&quot;&gt; units</li>
+            <li class="icon solid fa-link">Cross-lingual relations via &lt;linkGrp&gt; bundles</li>
+            <li class="icon solid fa-check">Validated against TEI P5 schemas</li>
+          </ul>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">© <span id="year"></span> Karen Blixen Aligned — EN–DA.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
