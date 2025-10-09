@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>The Deluge at Norderney Alignment | Karen Blixen Aligned</title>
+  <link rel="stylesheet" href="fontawesome-all.min.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Karen Blixen</strong> Aligned (EN–DA)</a>
+          <ul class="icons">
+            <li><a href="demo.html" class="button small">Demo</a></li>
+            <li><a href="thepoet.html" class="button small">The Poet</a></li>
+          </ul>
+        </header>
+
+        <section id="intro">
+          <header class="major">
+            <h2>The Deluge at Norderney / Syndfloden i Norderney</h2>
+          </header>
+          <p class="text-justify">
+            This alignment presents the dramatic flood narrative from <strong>Seven Gothic Tales</strong>, pairing the
+            Danish original with its English translation. Explore how motifs of fate, sacrifice, and identity are
+            rendered across languages using the interactive viewer below.
+          </p>
+        </section>
+
+        <section id="alignment">
+          <header class="major">
+            <h2>Interactive Alignment Viewer</h2>
+          </header>
+          <div class="box alignment-viewer">
+            <tei-alignment-viewer src="Syndfloden_da-en.xml"></tei-alignment-viewer>
+          </div>
+          <ul class="actions">
+            <li><a href="Syndfloden_da-en.xml" class="button">Download TEI</a></li>
+          </ul>
+        </section>
+
+        <section id="context">
+          <header class="major">
+            <h2>Reading Tips</h2>
+          </header>
+          <div class="features">
+            <article>
+              <span class="icon solid fa-exchange-alt"></span>
+              <div class="content">
+                <h3>Compare Phrasing</h3>
+                <p>Follow how key sentences shift between Danish and English to capture Blixen’s tone and pacing.</p>
+              </div>
+            </article>
+            <article>
+              <span class="icon solid fa-lightbulb"></span>
+              <div class="content">
+                <h3>Trace Themes</h3>
+                <p>Identify echoes of destiny and confession that bind the multilingual narrative together.</p>
+              </div>
+            </article>
+            <article>
+              <span class="icon solid fa-layer-group"></span>
+              <div class="content">
+                <h3>Use Joins</h3>
+                <p>Linked spans reveal complex correspondences—ideal for classroom discussions and research notes.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div class="inner">
+        <section id="search" class="alt">
+          <form method="post" action="#">
+            <input type="text" name="query" id="query" placeholder="Search" />
+          </form>
+        </section>
+
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="demo.html">Alignment Demo</a></li>
+            <li><a href="thepoet.html">The Poet Viewer</a></li>
+            <li><a href="#alignment">Deluge Viewer</a></li>
+          </ul>
+        </nav>
+
+        <section>
+          <header class="major">
+            <h2>About This Alignment</h2>
+          </header>
+          <p class="text-justify">
+            Generated from TEI/XML sources, this view keeps structural correspondences intact while presenting
+            the text in a responsive layout shared across all Karen Blixen Aligned prototypes.
+          </p>
+        </section>
+
+        <footer id="footer">
+          <p class="copyright">© <span id="year"></span> Karen Blixen Aligned — EN–DA.</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="tei-alignment-viewer.js"></script>
+</body>
+</html>
