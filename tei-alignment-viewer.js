@@ -307,9 +307,25 @@ const palette = [
           return card;
         };
 
-        Object.values(langData).forEach(data => {
-          cards.appendChild(makeCard(data));
-        });
+        const priority = {
+          english: 0,
+          en: 0,
+          eng: 0,
+          dansk: 1,
+          danish: 1,
+          da: 1
+        };
+
+        Object.values(langData)
+          .sort((a, b) => {
+            const pa = priority[a.lang] ?? Number.MAX_SAFE_INTEGER;
+            const pb = priority[b.lang] ?? Number.MAX_SAFE_INTEGER;
+            if (pa !== pb) return pa - pb;
+            return (a.title || '').localeCompare(b.title || '');
+          })
+          .forEach(data => {
+            cards.appendChild(makeCard(data));
+          });
 
         layout.appendChild(sidebar);
         layout.appendChild(cards);
